@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天应用</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 顶部导航栏 -->
+        <nav class="top-nav">
+            <div class="search-box">
+                <input type="search" placeholder="搜索联系人或消息..." autocomplete="off">
+            </div>
+            <h1>聊天</h1>
+            <div class="settings">
+                <button class="settings-btn">⚙️</button>
+                <div class="settings-menu">
+                    <div class="settings-header">
+                        <div class="user-profile">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="用户头像" class="avatar" id="userAvatar">
+                            <div class="user-info">
+                                <h3 id="userName">用户名</h3>
+                                <p>点击头像更换</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-content">
+                        <div class="settings-section">
+                            <h4>主题设置</h4>
+                            <div class="theme-selector">
+                                <button class="theme-btn light active" data-theme="light">浅色</button>
+                                <button class="theme-btn dark" data-theme="dark">深色</button>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>个人信息</h4>
+                            <div class="setting-item">
+                                <label>用户名</label>
+                                <input type="text" id="userNameInput" placeholder="输入用户名">
+                            </div>
+                            <div class="setting-item">
+                                <label>状态消息</label>
+                                <input type="text" id="userStatus" placeholder="设置状态消息">
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>通知设置</h4>
+                            <div class="setting-item">
+                                <label>消息通知</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="notificationToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>声音提醒</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="soundToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <div class="contacts">
+                    <div class="contact-item active">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="AI助手" class="avatar">
+                        <div class="contact-info">
+                            <h3>AI助手</h3>
+                            <p>随时为您服务</p>
+                        </div>
+                    </div>
+                    <!-- 更多联系人将通过JavaScript动态添加 -->
+                </div>
+                <button class="add-contact">+ 添加联系人</button>
+            </aside>
+
+            <!-- 聊天区域 -->
+            <main class="chat-area">
+                <div class="messages">
+                    <!-- 消息将通过JavaScript动态添加 -->
+                </div>
+                <div class="input-area">
+                    <div class="tool-buttons">
+                        <button class="attachment-btn" type="button">
+                            <span>📎</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item"><span>📷</span> 图片</div>
+                            <div class="dropdown-item"><span>📁</span> 文件</div>
+                            <div class="dropdown-item"><span>😊</span> 表情</div>
+                        </div>
+                    </div>
+                    <textarea placeholder="输入消息..." rows="1"></textarea>
+                    <button class="voice-btn" title="按住说话">🎤</button>
+                    <button class="send-btn">发送</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
